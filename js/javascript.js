@@ -21,11 +21,15 @@ url += '?' + $.param({
   'facet_field': "section_name",
   'facet_filter': "true"
 });
+$(document).on("click", function(){
 $.ajax({
   url: url,
   method: 'GET',
 }).done(function(result) {
   console.log(result);
+  
 }).fail(function(err) {
   throw err;
+
+});
 });
